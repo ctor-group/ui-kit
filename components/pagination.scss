@@ -1,0 +1,26 @@
+ul.pagination {
+    li {
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+        &.active {
+            background-color: $color-p3;
+            border-radius: 50%;
+        }
+        &:hover,
+        &:focus {
+            a {
+                @include font(13px, $color-p4d2);
+            }
+        }
+        a {
+            @include font(13px, $color-p4d1);
+        }
+        &::before {
+            display: none;
+        }
+        &.disabled {
+            margin-right: 25px;
+        }
+    }
+}

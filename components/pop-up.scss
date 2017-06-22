@@ -1,0 +1,11 @@
+.pop-up {
+    box-shadow: $default-box-shadow;
+    min-width: 320px;
+    padding: 30px;
+    border-radius: 3px;
+    border: 1px solid $color-p4l2;
+    &-body {
+        @include font(13px, #51555a, 400);
+        text-align: justify;
+    }
+}

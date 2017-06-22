@@ -1,0 +1,84 @@
+.alert {
+    border-radius: 3px;
+    margin: 5px 0;
+    padding: 0 20px;
+    line-height: 50px;
+
+    @each $status, $color in $status-colors-array {
+        &-#{$status} {
+            background: $color;
+            border: 1px solid $color;
+            @include font(14px, white, 700);
+            &-close {
+                color: white;
+            }
+            &::before {
+                @include font(15px, white, normal, FontAwesome);
+            }
+        }
+        &-#{$status}-o {
+            @include background-opacity($color, 0.1);
+            border: 1px solid $color;
+            @include font(14px, $color, 700);
+            &-close {
+                color: $color;
+            }
+            &::before {
+                @include font(15px, $color, normal, FontAwesome);
+            }
+        }
+    }
+    &-success-o,
+    &-success {
+        &::before {
+            content: '\f058';
+            padding-right: 15px;
+            @include font(15px, inherit, normal, FontAwesome);
+        }
+    }
+    &-info-o,
+    &-info {
+        &::before {
+            content: '\f05a';
+            padding-right: 15px;
+            @include font(15px, inherit, normal, FontAwesome);
+        }
+    }
+    &-error-o,
+    &-error {
+        &::before {
+            content: '\f188';
+            padding-right: 15px;
+            @include font(15px, inherit, normal, FontAwesome);
+        }
+    }
+    &-warning-o,
+    &-warning {
+        &::before {
+            content: '\f071';
+            padding-right: 15px;
+            @include font(15px, inherit, normal, FontAwesome);
+        }
+    }
+    &-body {
+        display: inline-block;
+        text-transform: uppercase;
+    }
+    &-close {
+        float: right;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            cursor: pointer;
+        }
+        &::before {
+            line-height: 50px;
+        }
+    }
+    &-slim {
+        line-height: 40px;
+        .alert-close::before {
+            line-height: 40px;
+        }
+    }
+}

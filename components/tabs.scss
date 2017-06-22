@@ -1,0 +1,74 @@
+.tabs {
+    border: none;
+    li.tab {
+        &::before {
+            display: none;
+        }
+        a {
+            @include font(15px, $color-p4, 500);
+            &:hover {
+                @include font(15px, $color-p4d3, 500);
+            }
+            &.active {
+                @include font(15px, $color-p4d3, 500);
+
+            }
+        }
+        &.disabled {
+            a,
+            a:hover {
+                @include font(15px, $color-p4d1, 500);
+            }
+        }
+    }
+
+    &-full {
+        background-color: $color-p3l3;
+        li.tab {
+            a {
+                @include font(15px, #13aeff, 500);
+                border: 1px solid transparent;
+                border-bottom-color: #c4ebff;
+                &:hover {
+                    @include font(15px, #13aeff, 500);
+                }
+            }
+            a.active {
+                @include font(15px, $color-p3d1);
+                background-color: white;
+                border: 1px solid #c4ebff;
+                border-bottom-color: transparent;
+            }
+        }
+        .indicator {
+            display: none;
+        }
+    }
+    &-cells {
+        border: 1px solid #c4ebff;
+        border-radius: 3px;
+        li.tab {
+            a {
+                @include font(15px, #0f8bcc, 500);
+                &:hover {
+                    background-color: #e8f7ff;
+                    border: 1px solid #c4ebff;
+                    border-top: none;
+                    border-bottom: none;
+                    @include font(15px, #09577f, 500);
+                }
+            }
+            a.active {
+                @include font(15px, white);
+                background-color: #13aeff;
+
+            }
+        }
+        .indicator {
+            display: none;
+        }
+    }
+    .indicator {
+        background-color: $color-p3;
+    }
+}

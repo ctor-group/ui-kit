@@ -1,0 +1,199 @@
+/*
+fields status
+use @extend .success or @extend .error
+*/
+.success {
+    color: $color-p1;
+    border: 1px solid $color-success;
+}
+
+.error {
+    color: #f44747;
+    border: 1px solid #f44747;
+}
+
+/* default fields status */
+.select-wrapper input.select-dropdown,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    border-radius: 3px;
+    border: 1px solid $color-p4l2;
+    background-color: $color-p4l3;
+    @include font(14px, $color-p4, 300);
+    padding: 0 20px;
+    line-height: 48px;
+    width: 100%;
+    height: inherit;
+    box-sizing: border-box;
+    &:hover {
+        box-shadow: $default-box-shadow;
+        border: 1px solid $color-p4l2;
+        background-color: #fff;
+    }
+    &:active:not([readonly]),
+    &:focus:not([readonly]) {
+        box-shadow: $secondary-box-shadow;
+        border: 1px solid $color-p3;
+        background-color: #fff;
+    }
+    &.success,
+    &:hover.success {
+        @extend .success;
+    }
+    &.error,
+    &:hover.error {
+        @extend .error;
+    }
+}
+
+select {
+    padding: 14px 20px;
+}
+
+.form-slim {
+    line-height: 40px !important;
+}
+
+select.form-slim {
+    height: 40px;
+    padding: 10px 20px;
+}
+
+.select-wrapper {
+    .dropdown-content {
+        border-radius: 3px;
+        li {
+            &:hover:not(.disabled) {
+                background-color: $color-p3l3;
+                span {
+                    color: $color-p3;
+                }
+            }
+            span {
+                padding: 15px 20px;
+                @include font(14px, $color-p4d1, 500);
+            }
+            &.disabled {
+                border: 1px solid $color-p3;
+                border-radius: 3px;
+                box-sizing: border-box;
+                span {
+                    padding: 13px 20px;
+                }
+            }
+        }
+        &::before {
+            content: '\f0d8';
+            position: absolute;
+            top: 14px;
+            right: 15px;
+            @include font(15px, $color-p3, normal, FontAwesome);
+        }
+    }
+    span.caret {
+        right: 15px;
+        font-size: 0;
+        &::before {
+            content: '\f0d7';
+            @include font(15px, $color-p4d1, normal, FontAwesome);
+            display: inline-block;
+            z-index: 2;
+            position: relative;
+        }
+    }
+    .dropdown-content {
+
+    }
+}
+
+/* count number field */
+.number-field {
+    margin: 0;
+    position: relative;
+    display: block;
+    border: 1px solid transparent;
+    .minus,
+    .plus {
+        position: absolute;
+        top: 0;
+        display: inline-block;
+        height: 50px;
+        width: 52px;
+        border: 1px solid $color-p4l2;
+        background-color: white;
+        text-align: center;
+        cursor: pointer;
+        &::before {
+            @include font(15px, $color-p4, normal, FontAwesome);
+            line-height: 50px;
+            display: inline;
+        }
+    }
+    .minus {
+        left: 0;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        &::before {
+            content: '\f068';
+        }
+    }
+    .plus {
+        right: 0;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        &::before {
+            content: '\f067';
+        }
+    }
+    input {
+        padding: 0 55px;
+        min-width: 150px;
+        margin: 0;
+        text-align: center;
+        &:hover,
+        &:focus:not([readonly]) {
+            border: 1px solid $color-p4l2;
+            background-color: $color-p4l3;
+            box-shadow: none;
+        }
+    }
+    &.form-slim {
+        input {
+            line-height: 40px;
+        }
+        .plus,
+        .minus {
+            height: 42px;
+            width: 40px;
+            &::before {
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+/* radio, checkbox */
+.with-gap[type="radio"] + label,
+[type="checkbox"] + label {
+    color: $color-p4d3;
+    @include font(13px, $color-p4d3);
+}
+
+.filled-in[type="checkbox"]:checked + label::after {
+    border: 2px solid $color-p3;
+    background-color: $color-p3;
+}
+
+[type="radio"]:checked + label::after,
+.with-gap[type="radio"]:checked + label::after {
+    background-color: $color-p3;
+}
+
+.with-gap[type="radio"]:checked + label::before,
+.with-gap[type="radio"]:checked + label::after,
+.with-gap[type="radio"]:hover + label::before,
+.with-gap[type="radio"]:hover + label::after {
+    border: 2px solid $color-p3;
+}
+
+

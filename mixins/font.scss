@@ -1,0 +1,10 @@
+@mixin font($font-size: 14px, $font-color: $color-p4d3, $font-weight:400, $font-family: sans-serif) {
+    font-size: $font-size;
+    color: $font-color;
+    font-weight: $font-weight;
+    font-family: $font-family;
+}
+
+@mixin background-gradient($from-color, $to-color, $to: right) {
+    background: linear-gradient(to right, #{$from-color} 0%, #{$to-color} 100%);
+}
