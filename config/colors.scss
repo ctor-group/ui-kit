@@ -1,3 +1,8 @@
+$color-p1: #1bad58;
+$color-p2: #fa8e11;
+$color-p3: #13aeff;
+$color-p4: #656a70;
+
 $color-success: #09a912;
 $color-warning: #ffaa33;
 $color-error: #f44747;
@@ -6,75 +11,56 @@ $color-info: #21a5f8;
 $status-colors-array: (
         success: $color-success,
         warning: $color-warning,
-        error: $color-error,
         info: $color-info,
+        error: $color-error,
 );
 
 $buttons-colors-array: (
-        success: #1bad58,
-        warning: #fa8e11,
-        info: #13aeff,
-        error: #f44747
+        success: $color-success,
+        warning: $color-warning,
+        info: $color-info,
+        error: $color-error,
 );
 
+$WHITE: #FFF;
+$BLACK: #000;
 
-// Primary 1
-$color-p1: #1bad58;
+// Primary 1 Lightens
+$color-p1l1: mix($WHITE, $color-p1, 40%);
+$color-p1l2: mix($WHITE, $color-p1, 75%);
+$color-p1l3: mix($WHITE, $color-p1, 90%);
 
-// Primary 1 Darken
-$color-p1d1: #168a46;
-$color-p1d2: #0d562c;
-$color-p1d3: #08341a;
+// Primary 1 Darkens
+$color-p1d1: mix($BLACK, $color-p1, 40%);
+$color-p1d2: mix($BLACK, $color-p1, 75%);
+$color-p1d3: mix($BLACK, $color-p1, 90%);
 
-// Primary 1 Lighten
-$color-p1l1: #76ce9b;
-$color-p1l2: #c6ead5;
-$color-p1l3: #e9f7ef;
+// Primary 2 Lightens
+$color-p2l1: mix($WHITE, $color-p2, 40%);
+$color-p2l2: mix($WHITE, $color-p2, 75%);
+$color-p2l3: mix($WHITE, $color-p2, 90%);
 
+// Primary 2 Darkens
+$color-p2d1: mix($BLACK, $color-p2, 40%);
+$color-p2d2: mix($BLACK, $color-p2, 75%);
+$color-p2d3: mix($BLACK, $color-p2, 90%);
 
+// Primary 3 Lightens
+$color-p3l1: mix($WHITE, $color-p3, 40%);
+$color-p3l2: mix($WHITE, $color-p3, 75%);
+$color-p3l3: mix($WHITE, $color-p3, 90%);
 
+// Primary 3 Darkens
+$color-p3d1: mix($BLACK, $color-p3, 40%);
+$color-p3d2: mix($BLACK, $color-p3, 75%);
+$color-p3d3: mix($BLACK, $color-p3, 90%);
 
-// Primary 2
-$color-p2: #fa8e11;
+// Primary 4 Lightens
+$color-p4l1: mix($WHITE, $color-p4, 40%);
+$color-p4l2: mix($WHITE, $color-p4, 75%);
+$color-p4l3: mix($WHITE, $color-p4, 90%);
 
-// Primary 2 Darken
-$color-p2d1: #c8720e;
-$color-p2d2: #7d4708;
-$color-p2d3: #4b2a05;
-
-// Primary 2 Lighten
-$color-p2l1: #fcbb70;
-$color-p2l2: #fee3c3;
-$color-p2l3: #fff4e8;
-
-
-
-
-// Primary 3
-$color-p3: #13aeff;
-
-// Primary 3 Darken
-$color-p3d1: #0f8bcc;
-$color-p3d2: #09577f;
-$color-p3d3: #06344c;
-
-// Primary 3 Lighten
-$color-p3l1: #71ceff;
-$color-p3l2: #c4ebff;
-$color-p3l3: #e8f7ff;
-
-
-
-
-// Primary 4
-$color-p4: #656a70;
-
-// Primary 4 Darken
-$color-p4d1: #51555a;
-$color-p4d2: #323538;
-$color-p4d3: #1e2021;
-
-// Primary 4 Lighten
-$color-p4l1: #a3a6a9;
-$color-p4l2: #d8dadb;
-$color-p4l3: #f0f0f1;
+// Primary 4 Darkens
+$color-p4d1: mix($BLACK, $color-p4, 40%);
+$color-p4d2: mix($BLACK, $color-p4, 75%);
+$color-p4d3: mix($BLACK, $color-p4, 90%);
