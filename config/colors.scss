@@ -37,9 +37,9 @@ $color-p1l2: mix($WHITE, $color-p1, 75%);
 $color-p1l3: mix($WHITE, $color-p1, 90%);
 
 // Primary 1 Darkens
-$color-p1d1: mix($BLACK, $color-p1, 40%);
-$color-p1d2: mix($BLACK, $color-p1, 75%);
-$color-p1d3: mix($BLACK, $color-p1, 90%);
+$color-p1d1: mix($BLACK, $color-p1, 20%);
+$color-p1d2: mix($BLACK, $color-p1, 50%);
+$color-p1d3: mix($BLACK, $color-p1, 70%);
 
 // Primary 2 Lightens
 $color-p2l1: mix($WHITE, $color-p2, 40%);
@@ -47,9 +47,9 @@ $color-p2l2: mix($WHITE, $color-p2, 75%);
 $color-p2l3: mix($WHITE, $color-p2, 90%);
 
 // Primary 2 Darkens
-$color-p2d1: mix($BLACK, $color-p2, 40%);
-$color-p2d2: mix($BLACK, $color-p2, 75%);
-$color-p2d3: mix($BLACK, $color-p2, 90%);
+$color-p2d1: mix($BLACK, $color-p2, 20%);
+$color-p2d2: mix($BLACK, $color-p2, 50%);
+$color-p2d3: mix($BLACK, $color-p2, 70%);
 
 // Primary 3 Lightens
 $color-p3l1: mix($WHITE, $color-p3, 40%);
@@ -57,9 +57,9 @@ $color-p3l2: mix($WHITE, $color-p3, 75%);
 $color-p3l3: mix($WHITE, $color-p3, 90%);
 
 // Primary 3 Darkens
-$color-p3d1: mix($BLACK, $color-p3, 40%);
-$color-p3d2: mix($BLACK, $color-p3, 75%);
-$color-p3d3: mix($BLACK, $color-p3, 90%);
+$color-p3d1: mix($BLACK, $color-p3, 20%);
+$color-p3d2: mix($BLACK, $color-p3, 50%);
+$color-p3d3: mix($BLACK, $color-p3, 70%);
 
 // Primary 4 Lightens
 $color-p4l1: mix($WHITE, $color-p4, 40%);
@@ -67,9 +67,9 @@ $color-p4l2: mix($WHITE, $color-p4, 75%);
 $color-p4l3: mix($WHITE, $color-p4, 90%);
 
 // Primary 4 Darkens
-$color-p4d1: mix($BLACK, $color-p4, 40%);
-$color-p4d2: mix($BLACK, $color-p4, 75%);
-$color-p4d3: mix($BLACK, $color-p4, 90%);
+$color-p4d1: mix($BLACK, $color-p4, 20%);
+$color-p4d2: mix($BLACK, $color-p4, 50%);
+$color-p4d3: mix($BLACK, $color-p4, 70%);
 
 $grid-colors-array: (
         color-1: (
