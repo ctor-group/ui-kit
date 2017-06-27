@@ -1,0 +1,36 @@
+@each $group, $items in $grid-colors-array {
+  @each $item, $value in $items {
+    @if length($value) == 1 {
+      .text-#{$group} {
+        color: $value;
+      }
+      .bg-#{$group} {
+        background-color: $value;
+        border:$default-border-width solid transparent;
+      }
+      .o-bg-#{$group} {
+        box-sizing: border-box;
+        border:$default-border-width solid $value;
+      }
+    }
+    @else {
+      @each $item, $array in $items {
+        @if length($value) != 0  {
+          @each $number,$color in $array {
+            .text-#{$group}.t-#{$item}-#{$number} {
+              color: $color;
+            }
+            .bg-#{$group}.bg-#{$item}-#{$number} {
+              background-color: $color;
+              border:$default-border-width solid transparent;
+            }
+            .o-bg-#{$group}.o-bg-#{$item}-#{$number} {
+              box-sizing: border-box;
+              border:$default-border-width solid $color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

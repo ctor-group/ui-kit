@@ -1,3 +1,8 @@
+// COLORS
+//default colors
+$WHITE: #FFF;
+$BLACK: #000;
+
 $color-p1: #1bad58;
 $color-p2: #fa8e11;
 $color-p3: #13aeff;
@@ -11,19 +16,20 @@ $color-info: #21a5f8;
 $status-colors-array: (
         success: $color-success,
         warning: $color-warning,
-        info: $color-info,
         error: $color-error,
+        info: $color-info
 );
 
 $buttons-colors-array: (
         success: $color-success,
         warning: $color-warning,
-        info: $color-info,
-        error: $color-error,
+        info:    $color-error,
+        error:   $color-info,
+        primary-1: $color-p1,
+        primary-2: $color-p2,
+        primary-3: $color-p3,
+        primary-4: $color-p4
 );
-
-$WHITE: #FFF;
-$BLACK: #000;
 
 // Primary 1 Lightens
 $color-p1l1: mix($WHITE, $color-p1, 40%);
@@ -64,3 +70,59 @@ $color-p4l3: mix($WHITE, $color-p4, 90%);
 $color-p4d1: mix($BLACK, $color-p4, 40%);
 $color-p4d2: mix($BLACK, $color-p4, 75%);
 $color-p4d3: mix($BLACK, $color-p4, 90%);
+
+$grid-colors-array: (
+        color-1: (
+                color: $color-p1,
+                lighten: (
+                        1:$color-p1l1,
+                        2:$color-p1l2,
+                        3:$color-p1l3
+                 ),
+                darken: (
+                        1:$color-p1d1,
+                        2:$color-p1d2,
+                        3:$color-p1d3
+                )
+        ),
+        color-2: (
+                color:$color-p2,
+                lighten: (
+                        1:$color-p2l1,
+                        2:$color-p2l2,
+                        3:$color-p2l3
+                ),
+                darken: (
+                        1:$color-p2d1,
+                        2:$color-p2d2,
+                        3:$color-p2d3
+                )
+        ),
+        color-3: (
+                color:$color-p3,
+                lighten: (
+                        1:$color-p3l1,
+                        2:$color-p3l2,
+                        3:$color-p3l3
+                ),
+                darken: (
+                        1:$color-p3d1,
+                        2:$color-p3d2,
+                        3:$color-p3d3
+                )
+        ),
+        color-4:(
+                color:$color-p4,
+                lighten: (
+                        1:$color-p4l1,
+                        2:$color-p4l2,
+                        3:$color-p4l3
+                ),
+                darken: (
+                        1:$color-p4d1,
+                        2:$color-p4d2,
+                        3:$color-p4d3
+                )
+        ),
+);
+

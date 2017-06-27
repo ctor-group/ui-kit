@@ -1,4 +1,15 @@
-$lg: screen and (max-width: 1200px);
+$primary-font-family:sans-serif;
+$secondary-font-family:"Museo Sans";
 
-$default-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+$default-border-width:1px;
+$default-border-radius:1px;
+
+$default-box-shadow:0 1px 5px rgba(0, 0, 0, 0.1);
 $secondary-box-shadow: inset 0 0 5px rgba(15, 139, 204, 0.4);
+
+// media grid materialize
+$extra-large:screen and (min-width: 1201px);
+$large:screen and (min-width: 993px);
+$medium:screen and (min-width: 601px);
+$small:screen and (max-width: 601px);
+$extra-small:screen and (max-width: 480px);

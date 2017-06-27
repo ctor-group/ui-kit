@@ -1,68 +1,62 @@
 /* headers */
 h1 {
-    @include font(47px, $color-p4d3, 900);
+  @include font(47px,$color-p4d3,900);
 }
-
 h2 {
-    @include font(35px, $color-p4d3, 700);
+  @include font(35px,$color-p4d3,700);
 }
-
 h3 {
-    @include font(27px, $color-p4d3, 500);
+  @include font(27px,$color-p4d3,500);
 }
-
 h4 {
-    @include font(22px, $color-p4d3, 700);
+  @include font(22px,$color-p4d3,700);
 }
-
 h5 {
-    @include font(17px, $color-p4d3, 700);
+  @include font(17px,$color-p4d3,700);
 }
-
 h6 {
-    @include font(15px, $color-p4d3, 700);
+  @include font(15px,$color-p4d3,700);
 }
 
 /* Paragraph */
 p {
-    @include font(14px, $color-p4d1, 500);
+  @include font(14px,$color-p4d1,500);
 }
-
 p.subtitle {
-    @include font(20px, $color-p4d3, 300);
+  @include font(20px,$color-p4d3,300);
 }
 
 blockquote {
-    border-left: 2px solid $color-p3;
-    padding-left: 20px;
-    margin-left: 0;
-    @include font(20px, $color-p4d1);
+  border-left: 2px solid $color-p3;
+  padding-left:20px;
+  margin-left: 0;
+  @include font(20px,$color-p4d1);
 }
 
 /* list */
 
 main {
-    ul:not(.tabs) {
-        @include font(15px, $color-p4d3, normal);
-        padding-left: 25px;
-        li {
-            position: relative;
-            list-style: none;
-            line-height: 30px;
-            &::before {
-                content: '\f111';
-                position: absolute;
-                left: -25px;
-                top: calc(50% - 15px);
-                @include font(10px, $color-p4l1, normal, FontAwesome);
-            }
-        }
-        & {
-            li.no-mark {
-                &::before {
-                    display: none;
-                }
-            }
-        }
+  ul:not(.tabs) {
+    @include font(15px,$color-p4d3,normal);
+    padding-left: 25px;
+    li {
+      position: relative;
+      list-style: none;
+      line-height:30px;
+      &::before {
+        content:'\f111';
+        position: absolute;
+        left:-25px;
+        top:calc(50% - 15px);
+        @include font(10px,$color-p4l1,normal,FontAwesome);
+      }
     }
+    & {
+      li.no-mark {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
 }
