@@ -1,0 +1,7 @@
+@mixin background-opacity($color, $opacity: 1) {
+  background: rgba($color, $opacity);
+}
+
+@mixin background-gradient($from-color,$to-color,$to:right) {
+  background: linear-gradient(to #{$to}, #{$from-color} 0%,#{$to-color} 100%);
+}

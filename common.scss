@@ -1,7 +1,8 @@
-@import "config/common";
 @import "config/colors";
-@import "config/fonts";
-
+@import "config/common";
 
 @import "mixins/font";
-@import "mixins/background-opacity";
+@import "mixins/font-face";
+@import "mixins/background";
+
+@import "assets/fonts";

@@ -1,58 +1,114 @@
 .button {
-    border-radius: 3px;
-    margin: 5px;
-    padding: 0 20px;
-    min-width: 180px;
-    display: inline-block;
-    line-height: 50px;
-    text-align: center;
-    @each $status, $color in $buttons-colors-array {
-        &-#{$status} {
-            background: $color;
-            border: none;
-            @include font(14px, white, 700);
-            &:hover,
-            &:focus {
-                background: rgba($color, .6);
-            }
-            &[disabled] {
-                background-color: $color-p4l2;
-                cursor: no-drop;
-            }
-        }
-        &-#{$status}-o {
-            background: white;
-            border: 1px solid $color;
-            line-height: 48px;
-            @include font(14px, $color, 700);
-            &:hover,
-            &:focus {
-                @include font(14px, white, 700);
-                line-height: 50px;
-                background: rgba($color, .6);
-                border: none;
-            }
-            &[disabled],
-            &[disabled]:hover {
-                line-height: 48px;
-                background-color: white;
-                border: 1px solid $color-p4l2;
-                cursor: no-drop;
-                color: $color-p4l2;
-            }
-        }
+  border-radius: 3px;
+  margin:5px;
+  padding: 0 20px;
+  min-width: 180px;
+  display:inline-block;
+  line-height: 50px;
+  text-align: center;
+  @each $status, $color in $buttons-colors-array {
+    &-#{$status} {
+      background: $color;
+      border:none;
+      @include font(14px,white,700);
+      &:hover,
+      &:focus {
+        background: rgba($color,.6);
+      }
+      &[disabled] {
+        background-color: $color-p4l2;
+        cursor:no-drop;
+      }
     }
-    /* custom buttons */
-    &-default {
-        line-height: 48px;
-        background-color: white;
-        border: 1px solid $color-p4l2;
-        @include font(14px, $color-p4d1, bold);
-        &:hover {
-            background-color: $color-p4l3;
+    &-#{$status}-o {
+      background: transparent;
+      border:1px solid $color;
+      line-height: 48px;
+      @include font(14px,$color,700);
+      &:hover,
+      &:focus {
+        @include font(14px,white,700);
+        line-height: 50px;
+        background: rgba($color,.6);
+        border:none;
+      }
+      &.button-slim {
+        line-height: 38px;
+      }
+    }
+  }
+   //custom buttons
+  &[disabled],
+  &[disabled]:hover {
+    line-height: 48px;
+    background-color: white;
+    border:1px solid $color-p4l2!important;
+    cursor:no-drop;
+    color: $color-p4l2!important;
+    &.button-slim {
+      line-height: 38px;
+    }
+  }
+  &-default {
+    line-height: 48px;
+    background-color: white;
+    border: 1px solid $color-p4l2;
+    @include font(14px,$color-p4d1,bold);
+    &:hover {
+      background-color: $color-p4l3;
+    }
+  }
+  &-slim {
+    line-height: 40px;
+  }
+  // grid colors
+  @each $group, $items in $grid-colors-array {
+    @each $item, $value in $items {
+      @if length($value) == 1 {
+        .text-#{$group} {
+          color: $value;
         }
+        .bg-#{$group} {
+          background-color: $value;
+          border:$default-border-width solid transparent;
+        }
+        .o-bg-#{$group} {
+          box-sizing: border-box;
+          border:$default-border-width solid $value;
+        }
+      }
+      @else {
+        @each $item, $array in $items {
+          @if length($array) > 1 {
+            @each $number,$color in $array {
+              &.text-#{$group}.t-#{$item}-#{$number} {
+                color: $color;
+              }
+              &.bg-#{$group}.bg-#{$item}-#{$number} {
+                background-color: $color;
+                border:$default-border-width solid transparent;
+                &.button-slim {
+                  line-height: 38px;
+                }
+              }
+              &.o-bg-#{$group}.o-bg-#{$item}-#{$number} {
+                box-sizing: border-box;
+                border:$default-border-width solid $color;
+                &.button-slim {
+                  line-height: 38px;
+                }
+              }
+              &.bg-#{$group}:hover,
+              &.o-bg-#{$group}:hover,
+              &.bg-#{$group}:focus,
+              &.o-bg-#{$group}:focus {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
     }
-    &-slim {
-        line-height: 40px;
-    }
+
+  }
 }
